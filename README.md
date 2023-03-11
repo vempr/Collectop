@@ -14,7 +14,7 @@ The game objective is to collect all of the red rings in a level before the time
 
 - Controls: up, down, right, left arrows (↑ ↓ → ←)
 
-
+![Game Screenshot](game.png)
 
 ## Credits
 
