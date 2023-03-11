@@ -1,6 +1,6 @@
 # Collectop
 
-A simple game as the last exercise of a course. I decided to create a fun little game, where the player has to collect some rings in a short timeframe. You can find the course at https://programming-23.mooc.fi/, and the exercise https://programming-23.mooc.fi/part-14/4-your-own-game#quiz-8435be7f-180e-5d13-b693-306ddaeb45cd
+A simple game as the last exercise of a programming course. I decided to create a fun little game, where the player has to collect some rings in a short timeframe. You can find the course at https://programming-23.mooc.fi/, and the exercise https://programming-23.mooc.fi/part-14/4-your-own-game#quiz-8435be7f-180e-5d13-b693-306ddaeb45cd
 
 Time needed from scratch: 1 day (5 hours)
 
