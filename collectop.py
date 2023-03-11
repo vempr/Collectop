@@ -14,8 +14,9 @@ class Collectop:
         self.total_points = 0
         self.points = 0
         self.level = 0
+        self.total_time = 0
         self.clock = pygame.time.Clock()
-        self.basetime = 20
+        self.basetime = 2
         self.time_left = self.basetime
         self.timer = pygame.USEREVENT + 1                                                
         pygame.time.set_timer(self.timer, 1000) 
@@ -131,6 +132,7 @@ class Collectop:
             if event.type == self.timer:
                 if self.time_left > 0:
                     self.time_left -= 1
+                    self.total_time += 1
                 else:
                     self.gameover()
       
@@ -175,10 +177,12 @@ class Collectop:
     def gameover(self):
         self.window.fill((0, 0, 0))
         verdicts = self.font.render(f"Total points: {self.total_points+self.points}  Level reached: {self.level}", True, (255, 255, 255))
+        total_t = self.font.render(f"Total time survived: {self.total_time} seconds", True, (255, 255, 255))
         try_again = self.font.render(f"Play again? Y    Quit? Esc", True, (255, 255, 255))
         
         self.window.blit(verdicts, (10*self.scale-verdicts.get_width()/2, 3*self.scale))
-        self.window.blit(try_again, (10*self.scale-try_again.get_width()/2, 3.5*self.scale))
+        self.window.blit(total_t, (10*self.scale-total_t.get_width()/2, 3.5*self.scale))
+        self.window.blit(try_again, (10*self.scale-try_again.get_width()/2, 4*self.scale))
         
         pygame.display.flip()
         
@@ -199,6 +203,7 @@ class Collectop:
         self.total_points = 0
         self.points = 0
         self.level = 0
+        self.total_time = 0
         self.time_left = self.basetime
         self.main_loop()
 
