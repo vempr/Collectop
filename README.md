@@ -1,0 +1,2 @@
+# Collectop
+Simple coin game
